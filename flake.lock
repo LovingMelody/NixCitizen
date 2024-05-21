@@ -93,7 +93,8 @@
         "nix-github-actions": "nix-github-actions",
         "nixpkgs": "nixpkgs",
         "systems": "systems",
-        "treefmt-nix": "treefmt-nix"
+        "treefmt-nix": "treefmt-nix",
+        "umu": "umu"
       }
     },
     "systems": {
@@ -129,6 +130,30 @@
         "owner": "numtide",
         "repo": "treefmt-nix",
         "type": "github"
+      }
+    },
+    "umu": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "dir": "packaging/nix",
+        "lastModified": 1716311465,
+        "narHash": "sha256-J0EAwWShHnXwIPFBxZ2V3vpuHSihLfRYNh3pVvh5GnI=",
+        "ref": "refs/heads/update-nix-package",
+        "rev": "655f870f451739d7aedf244459b7e7e8f298ee48",
+        "revCount": 501,
+        "submodules": true,
+        "type": "git",
+        "url": "https://github.com/LovingMelody/umu-launcher/?dir=packaging/nix"
+      },
+      "original": {
+        "dir": "packaging/nix",
+        "submodules": true,
+        "type": "git",
+        "url": "https://github.com/LovingMelody/umu-launcher/?dir=packaging/nix"
       }
     }
   },

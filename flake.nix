@@ -16,6 +16,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     systems.url = "github:nix-systems/default";
+    umu = {
+      url = "git+https://github.com/LovingMelody/umu-launcher/?dir=packaging\/nix&submodules=1";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -38,9 +42,11 @@
       });
       packages = eachSystem (pkgs: {
         inherit (pkgs)
+          umu
           star-citizen-helper
           lug-helper
           star-citizen
+          star-citizen-umu
           dxvk-gplasync
           ;
       });
