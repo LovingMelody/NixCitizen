@@ -24,26 +24,16 @@ with lib;
     package = mkOption {
       description = "Package to use for star-citizen";
       type = types.package;
-      default = smartPackage "star-citizen";
+      default = smartPackage "star-citizen-umu";
       apply =
         star-citizen:
-        star-citizen.override (old: {
+        star-citizen.override (_old: {
           preCommands = ''
             ${cfg.preCommands}
             ${if cfg.helperScript.enable then "${cfg.helperScript.package}/bin/star-citizen-helper" else ""}
-            ${if cfg.gplAsync.enable then "DXVK_ASYNC=1" else ""}
           '';
           inherit (cfg) postCommands location;
-          dxvk = if cfg.gplAsync.enable then cfg.gplAsync.package else old.dxvk;
         });
-    };
-    gplAsync = {
-      enable = mkEnableOption "Enable dxvk-gplasync configs";
-      package = mkOption {
-        description = "Package for DXVK GPL Async";
-        default = smartPackage "dxvk-gplasync";
-        type = types.package;
-      };
     };
     location = mkOption {
       default = "$HOME/Games/star-citizen";
@@ -90,14 +80,7 @@ with lib;
     };
   };
   config = mkIf cfg.enable {
-    assertions = [
-      (mkIf cfg.gplAsync.enable {
-
-        assertion = lib.strings.versionAtLeast (smartPackage "dxvk").version (smartPackage "dxvk-gplasync")
-        .version;
-        message = "The version of dxvk-gplasync is less than the current version of DXVK, needed patches are missing";
-      })
-    ];
+    assertions = [ ];
     boot.kernel.sysctl = mkIf cfg.setLimits {
       "vm.max_map_count" = mkOverride 999 16777216;
       "fs.file-max" = mkOverride 999 524288;
