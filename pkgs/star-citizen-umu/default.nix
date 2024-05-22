@@ -8,7 +8,8 @@
   callPackage,
   proton-ge-bin,
   umu,
-  gamemode,
+  # gamemode,
+  wrapCommand ? "",
   preCommands ? "",
   postCommands ? "",
   enableGlCache ? true,
@@ -41,7 +42,7 @@ let
     export PATH=${
       lib.makeBinPath [
         umu
-        gamemode
+        # gamemode
       ]
     }:$PATH
     export RSI_LAUNCHER="$WINEPREFIX/drive_c/Program Files/Roberts Space Industries/RSI Launcher/RSI Launcher.exe"
@@ -60,7 +61,7 @@ let
     ${powershell-stub}/bin/install.sh
 
     ${preCommands}
-    gamemoderun umu "$RSI_LAUNCHER" "$@"
+    ${wrapCommand} umu "$RSI_LAUNCHER" "$@"
 
     ${postCommands}
 

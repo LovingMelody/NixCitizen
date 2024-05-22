@@ -140,20 +140,21 @@
       },
       "locked": {
         "dir": "packaging/nix",
-        "lastModified": 1716311465,
-        "narHash": "sha256-J0EAwWShHnXwIPFBxZ2V3vpuHSihLfRYNh3pVvh5GnI=",
-        "ref": "refs/heads/update-nix-package",
-        "rev": "655f870f451739d7aedf244459b7e7e8f298ee48",
-        "revCount": 501,
+        "lastModified": 1716320624,
+        "narHash": "sha256-MeDrF6eshDxPB8ZKnC0oUek7PbU0RIndnJevcqWpS+E=",
+        "ref": "nix",
+        "rev": "ad926da30fe44b210520dd172e7fb2bfb3b3eddb",
+        "revCount": 503,
         "submodules": true,
         "type": "git",
-        "url": "https://github.com/LovingMelody/umu-launcher/?dir=packaging/nix"
+        "url": "https://github.com/Open-Wine-Components/umu-launcher/?dir=packaging/nix"
       },
       "original": {
         "dir": "packaging/nix",
+        "ref": "nix",
         "submodules": true,
         "type": "git",
-        "url": "https://github.com/LovingMelody/umu-launcher/?dir=packaging/nix"
+        "url": "https://github.com/Open-Wine-Components/umu-launcher/?dir=packaging/nix"
       }
     }
   },
