@@ -2,7 +2,8 @@ inputs: final: prev:
 let
   pins = import ./npins;
   nix-gaming = inputs.nix-gaming.packages.${final.system};
-  inherit (inputs.umu.packages.${final.system}) umu;
+  # inherit (inputs.umu.packages.${final.system}) umu;
+  umu = prev.callPackage ./pkgs/umu { };
 in
 {
   inherit umu;

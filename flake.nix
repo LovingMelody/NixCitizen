@@ -16,10 +16,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     systems.url = "github:nix-systems/default";
-    umu = {
-      url = "git+https://github.com/Open-Wine-Components/umu-launcher/?ref=nix&dir=packaging\/nix&submodules=1";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # umu = {
+    #   url = "git+https://github.com/Open-Wine-Components/umu-launcher/?ref=nix&dir=packaging\/nix&submodules=1";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
   };
 
   outputs =

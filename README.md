@@ -94,6 +94,8 @@ Then to add packages....
     environment.systemPackages = with pkgs; [ #`home.packages` if using home manager
         # replace or repeat for any included package
         inputs.nix-citizen.packages.${system}.star-citizen
+        # There is also an experimental star-citizen-umu package, this uses umu-launcher on the backend
+        # Proton is used from the nixpkgs (proton-ge-bin)
     ];
 
 };
@@ -122,3 +124,5 @@ WINEPREFIX=$HOME/Games/star-citizen nix run github:fufexan/nix-gaming#wine-ge --
   Layed the ground work for the star-citizen package
 - [fufexan/nix-gaming](https://github.com/fufexan/nix-gaming) - Maintaining
   Wine-GE & DXVK packages
+- [Open-Wine-Components/umu-launcher](Open-Wine-Components/umu-launcher) -
+  Unified Linux Wine Game Launcher (Also has definitions for nix packaging)
