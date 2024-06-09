@@ -58,6 +58,7 @@ with lib;
       enable = mkOption {
         default = false;
         type = types.bool;
+        description = "Star-citizen helper script to detect if the game has an update or not & clear cache";
       };
       package = mkOption {
         description = "Package to use for star-citizen-helper";

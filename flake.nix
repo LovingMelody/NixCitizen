@@ -49,6 +49,10 @@
           star-citizen-umu
           dxvk-gplasync
           ;
+        docs = import ./docs {
+          inherit pkgs inputs;
+          inherit (inputs.nixpkgs) lib;
+        };
       });
       githubActions = nix-github-actions.lib.mkGithubMatrix {
         checks =

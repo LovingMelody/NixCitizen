@@ -14,6 +14,7 @@ _: {
     statix.enable = true;
     rustfmt.enable = true;
     beautysh.enable = true;
+    mdformat.enable = true;
   };
   settings.formatter = {
     deadnix.excludes = [ "npins/default.nix" ];

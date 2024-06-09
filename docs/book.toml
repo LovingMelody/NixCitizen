@@ -1,0 +1,8 @@
+[book]
+title = "nix-citizen"
+language = "en"
+
+[output.html]
+site-url = "/nix-citizen"
+git-repository-url = "https://github.com/lovingmelody/nix-citizen"
+edit-url-template = "https://github.com/lovingmelody/nix-citizen/edit/main/docs/{path}"
