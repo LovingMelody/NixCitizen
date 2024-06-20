@@ -16,9 +16,9 @@ stdenv.mkDerivation {
     owner = "Open-Wine-Components";
     repo = "umu-launcher";
     fetchSubmodules = true;
-    # June 6th 2024
-    rev = "8dbaee35a2b193905c08a91203779d4bb6cbb924";
-    hash = "sha256-PFCzgM4cGnRn6Usq5kMp+iT6fPPQO5FeoGJ8zZ/XzCs=";
+    # June 17th 2024
+    rev = "dc41d603ceae2d644c274dc94dd40f97d49325d0";
+    hash = "sha256-psCA9hfFELEoPJ0kLMs+assjGtlgq2QC8HwiQBluosg=";
   };
   buildInputs = [
     meson
